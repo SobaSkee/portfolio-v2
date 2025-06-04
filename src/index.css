@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Optional: Global resets or overrides */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* customizing nes.css */
+.nes-btn.is-black {
+  background-color: #000000;
+  color: white;
+  border: 3px solid #000000;
+  font-family: 'Press Start 2P'
+}
+
+.nes-btn.is-black:hover {
+  background-color: #000000;
+  color: white;
+  border: 3px solid #000000;
+}
+
+.nes-btn.is-blush {
+  background-color: #F8A5C2;
+  color: white;
+  border: 3px solid #e292b0;
+}
+
+.nes-btn.is-blush:hover {
+  background-color: #F8A5C2;
+  color: white;
+  border: 3px solid #e292b0;
+}
+
+.nes-btn.is-blush:active {
+  background-color: #F8A5C2;
+  color: white;
+  border: 3px solid #e292b0;
+}
+
+.nes-btn.is-primary::after {
+  box-shadow: inset -4px -4px #d07a99 !important; /* soft pink shadow */
+}
+
+/* Hover shadow (deeper) */
+.nes-btn.is-blush:hover::after {
+  box-shadow: inset -6px -6px #d07a99 !important;
+}
+
+/* Active shadow (pressed effect) */
+.nes-btn.is-blush:active::after {
+  box-shadow: inset 4px 4px #d07a99 !important;
+}
+
+/* Focus ring (outer glow) */
+.nes-btn.is-blush:focus {
+  box-shadow: 0 0 0 6px rgba(208, 122, 153, 0.3) !important; /* rgba of #d07a99 */
+}
