@@ -1,6 +1,7 @@
 🌐 Welcome to my personal website!
 
-Built to showcase my work, projects, and personality as a full stack developer. You can visit it live at stanleyke.us.
+Built to showcase my work, projects, and personality as a full stack developer. You can visit it live at [stanleyke.us](https://www.stanleyke.us).
+
 📌 About the Site
 
 This site serves as a digital portfolio where I share:
