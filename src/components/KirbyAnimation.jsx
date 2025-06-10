@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import kirbyClosed from "../assets/city/kirby-closed.svg";
-import kirbyMid from "../assets/city/kirby-ready.svg";
-import kirbyOpen from "../assets/city/kirby-open.svg";
-import fakeCursor from "../assets/city/cursor.png";
+import kirbyClosed from "../assets/home/kirby-closed.svg";
+import kirbyMid from "../assets/home/kirby-ready.svg";
+import kirbyOpen from "../assets/home/kirby-open.svg";
+import fakeCursor from "../assets/home/cursor.png";
 import { gsap } from "gsap";
 
 const KirbyAnimation = () => {
@@ -11,16 +11,16 @@ const KirbyAnimation = () => {
     const kirbyRef = useRef(null);
     const fakeCursorRef = useRef(null);
 
-    useEffect(() => {
-        const handleMouseMove = (e) => {
-            console.log("Mouse position:", { x: e.clientX, y: e.clientY });
-        };
+    // useEffect(() => {
+    //     const handleMouseMove = (e) => {
+    //         console.log("Mouse position:", { x: e.clientX, y: e.clientY });
+    //     };
 
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, []);
+    //     window.addEventListener("mousemove", handleMouseMove);
+    //     return () => {
+    //         window.removeEventListener("mousemove", handleMouseMove);
+    //     };
+    // }, []);
 
     const lockCursor = () => {
         const el = document.body;
@@ -56,14 +56,14 @@ const KirbyAnimation = () => {
             const tl = gsap.timeline();
 
             tl.to(fakeCursorRef.current, {
-                x: 100,
+                x: 200,
                 y: 0,
                 duration: 0.05,
             });
 
             tl.to(fakeCursorRef.current, {
-                x: "+=5",
-                y: "-=5",
+                x: "+=2",
+                y: "-=2",
                 duration: 0.1,
                 repeat: 5,
                 yoyo: true,
@@ -73,17 +73,17 @@ const KirbyAnimation = () => {
             tl.to(fakeCursorRef.current, {
                 rotation: 720,
                 scale: 0.5,
-                x: 80,
-                y: 60,
+                x: 120,
+                y: 100,
                 duration: 0.5,
                 ease: "power2.in",
             });
 
             tl.to(fakeCursorRef.current, {
                 rotation: 1440,
-                scale: 0.1,
-                x: 70,
-                y: 90,
+                scale: 0.01,
+                x: 60,
+                y: 110,
                 duration: 0.5,
                 ease: "back.in(2)",
             });

@@ -2,17 +2,15 @@
 
 /* Optional: Global resets or overrides */
 
-html {
-  scroll-behavior: smooth;
-}
-
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 *,

@@ -1,24 +1,29 @@
 main {
     position: relative;
-    height: 100vh;
+
     overflow: hidden;
     margin: 0;
     padding: 0;
-    width: 100vw;
+
 }
 
 .parallax {
-    pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.3s cubic-bezier(0.24, 0.55, 0.34, 0.99);
     position: absolute;
 }
+
+/* Add pointer-events: none only to non-interactive parallax elements */
+.parallax:not(.text-city) {
+    pointer-events: none;
+}
+
 .city-1, .city-2, .city-3, .city-4, .city-5, .city-6, .porsche-body {
     max-width: none;
 }
 .sun-rays {
     position: absolute;
-    z-index: 19;
+    z-index: 8;
     width: 700px;
     top: 0;
     right: 0;
@@ -50,19 +55,33 @@ main {
     left: 50%;
     opacity: 0.5;
 }
-.head-icon {
+
+.kirby {
     position: absolute;
-    z-index: 10;
-    width: 100px;
-    top: calc(50% - 100px);
-    left: calc(50% - 220px);
+    z-index: 11;
+    width: 20rem;
+    top: calc(50% - 10px);
+    left: calc(50% - 20px);
 }
+
 .text-city {
     position: absolute;
     z-index: 10;
-    top: calc(50% - 150px);
-    left: calc(50% + 250px);
+    width: 500px;
+    top: calc(50% - 100px);
+    left: calc(50% + 300px);
 }
+/* absolute socials bg-white z-20 w-fit max-w-[12rem] top-16 left-44 nes-container is-rounded flex flex-col gap-2 */
+
+/* .socials {
+    position: absolute;
+    z-index: 20;
+    max-width: fit-content;
+    height: fit-content;
+    top: calc(50% - 300px);
+    left: calc(50% + 200px);
+} */
+
 
 .city-3 {
     position: absolute;
@@ -105,7 +124,18 @@ main {
     left: calc(50% - 1000px);
     background-position: center;
     background-repeat: repeat-x;
-    animation: road 9s linear infinite;
+    animation: road 5s linear infinite;
+}
+
+.street-img {
+    position: absolute;
+    z-index: 7;
+    max-width: none;
+    width: 500%;
+    height: 350px;
+    top: calc(50% + 50px);
+    left: calc(50% - 300px);
+    animation: road 3s linear infinite;
 }
 
 .porsche-body {
@@ -119,21 +149,62 @@ main {
 .porsche-left-wheel {
     position: absolute;
     z-index: 8;
+    animation: spin 0.05s linear infinite;
+    transform-origin: center;
     width: 90px;
     top: calc(50% + 297px);
     left: calc(50% - 177px);
-    animation: spin 0.005s linear infinite;
-    transform-origin: center;
+}
+
+.porsche-left-wheel.paused,
+.porsche-right-wheel.paused {
+    animation-play-state: paused;
 }
 
 .porsche-right-wheel {
     position: absolute;
     z-index: 8;
+    animation: spin 0.05s linear infinite;
+    transform-origin: center;
     width: 90px;
     top: calc(50% + 298px);
     left: calc(50% + 34px);
-    animation: spin 0.005s linear infinite;
-    transform-origin: center;
+}
+
+.pedals {
+    position: absolute;
+    z-index: 10;
+    width: fit-content;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.brake-pedal {
+    width: 7rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.gas-pedal {
+    width: 5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.brake-pedal:hover,
+.gas-pedal:hover {
+    transform: scale(1.05);
+}
+
+.street.paused,
+.street-img.paused {
+    animation-play-state: paused;
 }
 
 @keyframes spin {
@@ -147,17 +218,39 @@ main {
 }
 
 @media (max-width: 768px) {
-    main {
-    height: 100vh;
-    overflow: hidden;
+
+    .kirby {
+        width: 12rem;
+        top: calc(50% + 50px);
+        left: calc(50% - 100px);
     }
 
-    .parallax {
-      transform: none; /* or override if needed */
+    .text-city {
+        width: 320px;
+        top: 20%;
+        left: 10%;
+
     }
-    .head-icon {
-        top: calc(50% - 100px);
-        left: calc(50% - 220px);
+    
+
+
+    /* porsche restyling for mobile */
+    .porsche-body {
+        width: 300px;
+        top: calc(50% + 240px);
+        left: calc(50% - 150px);
+    }
+    .porsche-left-wheel {
+        width: 70px;
+        top: calc(50% + 287px);
+        left: calc(50% - 111px);
+        animation: spin 0.1s linear infinite;
+    }
+    .porsche-right-wheel {
+        width: 70px;
+        top: calc(50% + 290px);
+        left: calc(50% + 45px);
+        animation: spin 0.1s linear infinite;
     }
 
 }
