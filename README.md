@@ -1,12 +1,22 @@
-# React + Vite
+🌐 Welcome to my personal website!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built to showcase my work, projects, and personality as a full stack developer. You can visit it live at stanleyke.us.
+📌 About the Site
 
-Currently, two official plugins are available:
+This site serves as a digital portfolio where I share:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    🔧 My development skills and stack
 
-## Expanding the ESLint configuration
+    🧠 Projects I’ve built and contributed to
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    📄 My resume and contact info
+
+    🎾 Some of my interests and hobbies
+
+Thanks for stopping by!
+
+Feel free to connect with me!
+
+    Email: stanleyke.jobs@gmail.com
+
+    LinkedIn: linkedin.com/in/stanley-ke
