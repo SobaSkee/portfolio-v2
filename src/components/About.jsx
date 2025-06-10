@@ -10,7 +10,7 @@ const About = () => {
 
     return (
         <div
-            className="relative h-screen min-h-screen flex flex-col md:flex-row"
+            className="relative h-[120vh] md:h-screen min-h-screen flex flex-col md:flex-row"
             id="about"
         >
             <div className="relative w-full md:w-1/2 h-full">
