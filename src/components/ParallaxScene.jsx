@@ -12,7 +12,7 @@ import porscheWheel from "../assets/home/wheel.png";
 import fog from "../assets/home/fog.svg";
 import sunRays from "../assets/home/sun-rays.png";
 import KirbyAnimation from "./KirbyAnimation";
-import Resume from "../assets/Stanley_Ke_Resume_May_2025.pdf";
+import Resume from "../assets/Stanley_Ke_Resume_Jun_2025.pdf";
 import brakePedal from "../assets/home/brake-pedal.svg";
 import gasPedal from "../assets/home/gas-pedal.svg";
 import fogDivider from "../assets/fog-divider.png";
